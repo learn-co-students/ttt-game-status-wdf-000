@@ -26,12 +26,10 @@ end
 
 def full?(board)
 
-  board.each do |space|
-    if space == " " || space == "  "
-      return false
-    end
+  not_full = board.any? do |space|
+    space == " " || space == "  "
   end
-return true
+  !not_full
 end
 
 
