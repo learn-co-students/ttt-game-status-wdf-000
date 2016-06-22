@@ -56,15 +56,20 @@ def full?(board)
 end
 
 def draw?(board)
-  if full?(board) && !won?(board)
-    true
-  else
-    false
-  end
+  # if full?(board) && !won?(board)
+  #   true
+  # else
+  #   false
+  # end
+
+  full?(board) && !won?(board)
 end
 
 def over?(board)
-  won?(board) || draw?(board) ? true : false
+  # won?(board) || draw?(board) ? true : false
+
+  # ternary operator isn't needed
+  won?(board) || draw?(board)
 end
 
 def winner(board)
