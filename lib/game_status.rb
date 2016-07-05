@@ -59,6 +59,6 @@ def winner(board)
   if winning_combination != false
     board[winning_combination.first]
   else
-    nil
+    puts "No winner!"
   end
 end
