@@ -55,6 +55,7 @@ def over?(board)
 end
 
 def winner(board)
+  #mandatory comment field...no I'm kidding :P
   winning_combination = won?(board)
   if winning_combination != false
     board[winning_combination.first]
