@@ -47,15 +47,14 @@ def over?(board)
   won?(board) || full?(board) || draw?(board)
 end
 
+# won?(board) ? board[won?(board)[0]] : nil
 def winner(board)
   if won?(board)
     position = won?(board)
-    position.each do |x|
-    if board[x] == "X"
+    if board[position[0]] == "X"
       return "X"
     else
       return "O"
-    end
     end
   end
 end
